@@ -92,16 +92,38 @@ body {
 }
 
 .icon-button {
-  display: grid;
+  display: inline-flex;
   width: 42px;
   height: 42px;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.06);
   color: #f8f0df;
   cursor: pointer;
   font-size: 19px;
+  line-height: 1;
+  padding: 0;
+  text-align: center;
+}
+
+.icon-button span {
+  display: block;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+#prevSlide span {
+  transform: translate(-1px, -1px);
+}
+
+#nextSlide span {
+  transform: translate(1px, -1px);
+}
+
+#toggleFullscreen span {
+  transform: translateY(-.5px);
 }
 
 .icon-button:hover,
