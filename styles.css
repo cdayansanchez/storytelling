@@ -788,8 +788,33 @@ body.is-fullscreen .slide {
     width: 100vw;
     min-height: 100dvh;
     overflow-y: auto;
-    align-content: start;
+    align-content: center;
     padding: 82px 24px 96px;
+  }
+
+  .slide:has(.profile-grid),
+  .slide:has(.split),
+  .slide:has(.image-cards),
+  .slide:has(.source-list),
+  .image-split {
+    align-content: start;
+  }
+
+  .urgency {
+    align-content: center;
+  }
+
+  .urgency h2,
+  .urgency .split {
+    transform: translateY(92px);
+  }
+
+  .timeline-slide {
+    align-content: center;
+  }
+
+  .bars-slide {
+    align-content: center;
   }
 
   h2 {
@@ -889,6 +914,10 @@ body.is-fullscreen .slide {
   .image-split .text-panel {
     gap: 24px;
     padding: 0;
+  }
+
+  .image-split h2 {
+    margin-top: 22px;
   }
 
   .image-split img {
