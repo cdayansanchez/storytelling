@@ -542,10 +542,14 @@ strong {
 }
 
 .questions {
+  justify-items: center;
   text-align: center;
 }
 
 .questions > div {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 1180px);
   max-width: 100%;
   min-width: 0;
 }
@@ -553,17 +557,18 @@ strong {
 .questions h2 {
   position: static;
   color: var(--ink);
-  font-size: clamp(64px, 7vw, 92px);
+  font-size: clamp(56px, 6vw, 82px);
 }
 
 .questions p {
-  margin-top: 36px;
+  margin-top: 26px;
+  max-width: 1120px;
 }
 
 .questions hr {
   width: 570px;
   max-width: 60%;
-  margin: 105px auto 70px;
+  margin: 70px auto 48px;
   border: 0;
   border-top: 2px solid var(--line);
 }
@@ -800,6 +805,11 @@ body.is-fullscreen .slide {
     align-content: start;
   }
 
+  .image-split {
+    align-content: center;
+    justify-items: center;
+  }
+
   .urgency {
     align-content: center;
   }
@@ -865,6 +875,10 @@ body.is-fullscreen .slide {
     transform: none;
   }
 
+  .image-split .text-panel {
+    transform: translateY(12px);
+  }
+
   .profile-grid,
   .split,
   .card-grid,
@@ -912,12 +926,16 @@ body.is-fullscreen .slide {
   }
 
   .image-split .text-panel {
-    gap: 24px;
+    gap: 16px;
+    justify-items: center;
     padding: 0;
+    text-align: left;
   }
 
   .image-split h2 {
-    margin-top: 22px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 6px;
   }
 
   .image-split img {
@@ -1027,24 +1045,33 @@ body.is-fullscreen .slide {
   }
 
   .questions {
-    align-content: center;
-    justify-items: center;
+    display: block;
     overflow-x: hidden;
-    padding-top: 64px;
-    padding-bottom: 72px;
+    padding: 0;
   }
 
   .questions > div {
-    width: min(100%, 680px);
-    max-width: calc(100vw - 48px);
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    max-width: none;
     min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 76px 22px 82px;
+    transform: none;
   }
 
   .questions h2,
   .questions p {
+    width: auto;
     max-width: 100%;
     overflow-wrap: anywhere;
     word-break: normal;
+    text-align: center;
   }
 
   .questions p {
@@ -1137,12 +1164,13 @@ body.is-fullscreen .slide {
   }
 
   .questions {
-    padding-top: 60px;
-    padding-bottom: 66px;
+    padding: 0;
   }
 
   .questions > div {
-    max-width: calc(100vw - 36px);
+    width: 100%;
+    max-width: none;
+    padding: 72px 18px 76px;
   }
 
   .questions p {
