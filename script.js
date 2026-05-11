@@ -92,6 +92,8 @@ document.addEventListener("keydown", (event) => {
 deck.addEventListener(
   "wheel",
   (event) => {
+    if (window.matchMedia("(max-width: 900px)").matches) return;
+
     if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
     event.preventDefault();
     deck.scrollBy({ left: event.deltaY, behavior: "smooth" });
