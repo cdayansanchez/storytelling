@@ -286,6 +286,21 @@ strong {
   width: min(92%, 1640px);
 }
 
+.presenters {
+  display: grid;
+  justify-items: center;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.presenters p {
+  max-width: 620px;
+  margin: 0;
+  padding-block: 2px;
+  font-size: clamp(18px, 1.65vw, 28px);
+  line-height: 1.34;
+}
+
 .profile-grid,
 .split,
 .card-grid {
@@ -876,6 +891,17 @@ body.is-fullscreen .slide {
     margin-bottom: 30px;
     font-size: clamp(14px, 4vw, 18px);
     letter-spacing: 3px;
+  }
+
+  .presenters {
+    margin-bottom: 18px;
+  }
+
+  .presenters p {
+    max-width: 92%;
+    padding-block: 1px;
+    font-size: clamp(17px, 4.8vw, 20px);
+    line-height: 1.32;
   }
 
   .subtitle {
